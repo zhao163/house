@@ -20,15 +20,6 @@
 
     <div class='mapContent'>
       <Map></Map>
-      <dl>
-        <dt>联系方式</dt>
-        <dd>
-          <span>中国 · 太原 · 万柏林区恒大滨河左岸16号楼2单元201</span>
-          <span>公司：以琳福佑家政有限公司</span><br>
-          <span>电话：0351-610-3959</span>
-          <span>邮编：030000</span>
-        </dd>
-      </dl>
     </div>
 
     
@@ -54,7 +45,6 @@ export default {
 <style lang="less" scoped>
   .aboutUs {
     background: #fafcfc;
-    margin-bottom: 50px;
     .title {
       font-size: 1.2rem;
       color: #000;
@@ -144,9 +134,15 @@ export default {
 
     .mapContent {
       position: relative;
-      width: 100%;
+      background-color: #fff;
+      width: 90%;
+      border: 1px solid #ccc;
+      box-shadow: 1px 1px 3px #ededed;
+      padding: .68rem;
+      margin: auto;
+
       dl {
-        width: 90%;
+        width: 100%;
         font-size: 12px;
         margin: 0 auto;
         position: relative;

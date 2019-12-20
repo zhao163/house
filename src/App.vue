@@ -6,16 +6,18 @@
         <router-view/>
       </keep-alive>
     </div>
-    
+    <Foot></Foot>
   </div>
 </template>
 
 <script>
 import Head from './components/head'
+import Foot from './components/footer'
 export default {
   name: 'App',
   components: {
-    Head
+    Head,
+    Foot
   }
 }
 </script>

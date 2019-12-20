@@ -2,7 +2,7 @@
   <div class="header">
     <div class="headNav">
       <div class="logo">
-        <img src="../assets/logo1.png" class="logoImg" alt="logo" width="60" height="60">
+        <img src="../assets/logo1.png" class="logoImg" alt="logo" width="70" height="70">
         <div class="logoText">
           <p class="text">以琳福佑</p>
           <p>THE HOME OF BEAUTIFUL</p>
@@ -17,8 +17,10 @@
           <el-menu-item index="aboutUs">关于我们</el-menu-item>
         </el-menu>
         <div class="phone">
+         <div >
           <img src="../assets/phone.png" alt="" srcset="" width="30" height="30">
-          <span>0351-610-3959</span>
+          <span class="phone-num">0351-610-3959</span>
+        </div>
         </div>
       </div>
       
@@ -56,6 +58,7 @@ export default {
     width:100%;
     height: 80px;
     background: #fff;
+    color: #707070;
     z-index: 5;
     border-bottom: 2px solid #F3F3F3;
     position: fixed;
@@ -78,15 +81,18 @@ export default {
           display: flex;
         }
         .phone {
-          line-height: 80px;
-          margin: 0 2rem 0 1.2rem;
+          line-height: 82px;
+          padding-left: 0.9rem;
           img {
             vertical-align: middle;
+          }
+          .phone-num {
+            height: 40px;
             letter-spacing: .2em;
           }
           span {
             font-size: 0.55rem;
-            color: #909399;
+            color: #303133
           }
         }
       }
@@ -96,7 +102,7 @@ export default {
         padding: 10px 0;
         min-width: 196px;
         .logoImg {
-          border-radius: 60px;
+          border-radius: 70px;
         }
         .logoText {
           font-size: 12px;
@@ -105,9 +111,9 @@ export default {
           margin-left: .27rem;
           .text {
             font-weight: 700;
-            font-size: 16px;
-            letter-spacing: 1em;
-            padding: .34rem 0 ;
+            font-size: 24px;
+            letter-spacing: .7em;
+            padding: .2rem 0 ;
           }
         }
       }
@@ -117,11 +123,13 @@ export default {
     .el-menu.el-menu--horizontal{
       border: none;
       .el-menu-item {
-        font-size: .48rem;
+        font-size: 14px;
         border-bottom: none;
         height: 80px;
         line-height: 80px;
-        margin: 0 .86rem;
+        // margin: 0 .86rem;
+        padding: 0 1.86rem;
+        color: #303133
       }
     }
 

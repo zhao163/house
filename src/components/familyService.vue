@@ -1,24 +1,32 @@
 <template>
   <div class='family'>
-    <h2 class="title">
-      <span class="text">我们的产品</span>
-    </h2>
-    <div class='familyPurpose'>以琳福佑传递希望之光</div>
-    <div class="servicesBox">
-      <div class="k1120">
-        <div v-for="(item, index) in imgSrc" :key="index">
-          <div class="servicesIcon">
-            <img :src="item.url" alt="">
+    <div class="familybg">
+      <img src="../../static/images/familyService/familybg.jpeg" alt="">
+    </div>
+
+    <div class="familylist">
+      <h2 class="title">
+        <span class="text">我们的产品</span>
+      </h2>
+      <div class='familyPurpose'>以琳福佑传递希望之光</div>
+      <div class="servicesBox">
+        <div class="k1120">
+          <div v-for="(item, index) in imgSrc" :key="index">
+            <div class="servicesIcon">
+              <img :src="item.url" alt="">
+            </div>
+            <h3>{{item.position}}</h3>
+            <p v-for="(item2, i) in item.text" :key="i">{{item2}}</p>
           </div>
-          <h3>{{item.position}}</h3>
-          <p v-for="(item2, i) in item.text" :key="i">{{item2}}</p>
         </div>
       </div>
-  </div>
+    </div>
+    
   </div>
 </template>
 
 <script>
+
 export default {
   name: 'familyService',
   data() {
@@ -51,7 +59,12 @@ export default {
         }
       ]
     }
-  }
+  },
+  mounted() {
+    console.log(document.documentElement.clientHeight)
+  },
+
+
   
 }
 </script>
@@ -59,11 +72,21 @@ export default {
 <style lang="less" scoped>
 
   .family {
+    .familybg {
+      img{
+        width: 100%;
+        height: 30.9rem;
+      }
+      
+    }
+    .familylist {
+      height: 30.9rem;
+    }
     .familyPurpose {
       text-align: center;
       font-size: 0.48rem;
       letter-spacing: 1em;
-      padding: 0 0 .68rem 0;
+      padding: 0 0 2rem 0;
       color: #999;
     }
     .servicesBox {
@@ -93,8 +116,12 @@ export default {
 
         p {
           color: #999;
-          font-size: 12px;
-          line-height: 200%;
+          font-size: 14px;
+          line-height: 1.2rem;
+          cursor: pointer;
+        }
+        p:hover{
+          color: #29c9e6;
         }
 
         .servicesIcon {

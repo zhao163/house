@@ -1,5 +1,5 @@
 <template>
-  <div style="height:100%; width:90%; margin:0 auto">
+  <div style="height:100%; width:100%; margin:0 auto">
     <div class="map" id="Map"></div>
   </div>
 </template>
